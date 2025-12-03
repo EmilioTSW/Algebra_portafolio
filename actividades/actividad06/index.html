@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 6 – Expresiones algebraicas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JS GLOBAL + JS DE LA ACTIVIDAD -->
+  <script src="../../js/script_global.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER DE LA ACTIVIDAD -->
+  <header class="main-header">
+    <div class="header-content">
+      <small style="text-transform: uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--muted);">
+        Fundamentos de Álgebra · Actividad 6
+      </small>
+      <h1>Demostraciones de expresiones algebraicas</h1>
+      <p>Explora algunos productos notables básicos con valores numéricos.</p>
+
+      <a class="btn" href="../../index.html">← Volver al portafolio</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="page-actividad">
+
+    <!-- DESCRIPCIÓN -->
+    <section class="header-actividad">
+      <small>Productos notables · (a ± b)² y (a + b)(a - b)</small>
+      <h2>Visualización de productos notables básicos</h2>
+      <p class="intro-text">
+        Elige una expresión algebraica, ingresa los valores de <strong>a</strong> y
+        <strong>b</strong>, y observa la demostración paso a paso: primero la fórmula
+        general, luego el reemplazo de variables y por último el resultado numérico.
+      </p>
+    </section>
+
+    <!-- BLOQUE PRINCIPAL: FORMULARIO + TEORÍA -->
+    <section class="main-actividad" style="display:grid; gap:1.1rem; grid-template-columns:minmax(0,1.4fr) minmax(0,1.1fr);">
+
+      <!-- PANEL INTERACTIVO -->
+      <article>
+        <fieldset>
+          <legend>Selecciona la expresión</legend>
+
+          <label for="expresion">Expresión algebraica</label>
+          <select id="expresion">
+            <option value="apb2">(a + b)²</option>
+            <option value="amb2">(a - b)²</option>
+            <option value="apb_amb">(a + b)(a - b)</option>
+          </select>
+
+          <label for="valorA">Valor de a</label>
+          <input
+            type="number"
+            id="valorA"
+            placeholder="Ej. 3"
+            step="0.01"
+          >
+
+          <label for="valorB">Valor de b</label>
+          <input
+            type="number"
+            id="valorB"
+            placeholder="Ej. 2"
+            step="0.01"
+          >
+
+          <button class="btn" id="btnDemostrar">Mostrar demostración</button>
+        </fieldset>
+
+        <div class="result-panel" id="panelDemostracion">
+          Esperando datos… Elige una expresión, escribe a y b, y luego haz clic en
+          <strong>Mostrar demostración</strong>.
+        </div>
+      </article>
+
+      <!-- PANEL TEÓRICO / APOYO -->
+      <aside>
+        <fieldset>
+          <legend>Recordatorio de productos notables</legend>
+
+          <p style="font-size:.9rem; color:var(--muted); margin-bottom:.4rem;">
+            Algunas fórmulas básicas que se usan en esta actividad:
+          </p>
+
+          <ul style="font-size:.88rem; color:var(--muted); padding-left:1.1rem; line-height:1.5; margin-bottom:.6rem;">
+            <li>
+              <strong>(a + b)² = a² + 2ab + b²</strong>
+            </li>
+            <li>
+              <strong>(a - b)² = a² - 2ab + b²</strong>
+            </li>
+            <li>
+              <strong>(a + b)(a - b) = a² - b²</strong>
+            </li>
+          </ul>
+
+          <p style="font-size:.86rem; color:var(--muted);">
+            Cambiando los valores de <strong>a</strong> y <strong>b</strong>,
+            puedes observar cómo estas fórmulas generan distintos resultados
+            numéricos, pero siempre respetan el patrón algebraico del producto notable.
+          </p>
+        </fieldset>
+
+        <div class="result-panel" style="font-size:.85rem;">
+          Tip: prueba valores simples como <strong>a = 1, b = 1</strong>,
+          <strong>a = 2, b = 3</strong> o incluso números negativos, por ejemplo
+          <strong>a = -2, b = 4</strong>, para comparar los resultados.
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Actividad 6 · Demostraciones de expresiones algebraicas · Portafolio de Evidencias</p>
+  </footer>
+
+</body>
+</html>
