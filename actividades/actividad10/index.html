@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 10 – Productos notables</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JS GLOBAL + JS DE LA ACTIVIDAD -->
+  <script src="../../js/script_global.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER DE LA ACTIVIDAD -->
+  <header class="main-header">
+    <div class="header-content">
+      <small style="text-transform: uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--muted);">
+        Fundamentos de Álgebra · Actividad 10
+      </small>
+      <h1>Animaciones de productos notables</h1>
+      <p>Explora paso a paso la expansión de diferentes productos notables.</p>
+
+      <a class="btn" href="../../index.html">← Volver al portafolio</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="page-actividad">
+
+    <!-- DESCRIPCIÓN / INTRO -->
+    <section class="header-actividad">
+      <small>Productos notables · Visualización dinámica</small>
+      <h2>Visualización de productos notables</h2>
+      <p class="intro-text">
+        Selecciona un producto notable y reproduce la animación para ver cómo
+        se expande algebraicamente. El objetivo es que observes el patrón
+        que genera cada fórmula y cómo se llega a la expresión desarrollada.
+      </p>
+    </section>
+
+    <!-- BLOQUE PRINCIPAL: CONTROLES + PANEL TEÓRICO -->
+    <section class="main-actividad" style="display:grid; gap:1.1rem; grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr);">
+
+      <!-- PANEL DE INTERACCIÓN -->
+      <article>
+        <fieldset>
+          <legend>Producto notable</legend>
+
+          <label for="producto">
+            Elige el producto
+          </label>
+          <select id="producto">
+            <option value="apb2">(a + b)²</option>
+            <option value="amb2">(a - b)²</option>
+            <option value="apb_amb">(a + b)(a - b)</option>
+          </select>
+
+          <button class="btn" id="btnAnimar">Reproducir animación</button>
+        </fieldset>
+
+        <div class="result-panel" id="panelAnimacion">
+          Pulsa <strong>“Reproducir animación”</strong> para iniciar la demostración paso a paso.
+        </div>
+      </article>
+
+      <!-- PANEL DE APOYO / TEORÍA -->
+      <aside>
+        <fieldset>
+          <legend>Recordatorio de las fórmulas</legend>
+
+          <p style="font-size:.9rem; color:var(--muted); margin-bottom:.5rem;">
+            Los productos notables que se animan en esta actividad son:
+          </p>
+
+          <ul style="font-size:.88rem; color:var(--muted); padding-left:1.1rem; line-height:1.5; margin-bottom:.7rem;">
+            <li>
+              <strong>(a + b)² = a² + 2ab + b²</strong>
+            </li>
+            <li>
+              <strong>(a - b)² = a² - 2ab + b²</strong>
+            </li>
+            <li>
+              <strong>(a + b)(a - b) = a² - b²</strong>
+            </li>
+          </ul>
+
+          <p style="font-size:.86rem; color:var(--muted);">
+            Cada animación puede mostrar, por ejemplo, la distribución de términos,
+            el desarrollo de los paréntesis y el reagrupamiento final. De esta forma,
+            se conecta la fórmula memorizada con el proceso algebraico que la justifica.
+          </p>
+        </fieldset>
+
+        <div class="result-panel" style="font-size:.85rem;">
+          Tip: aunque aquí se usa notación simbólica, puedes relacionar luego estos
+          patrones con valores numéricos como hiciste en la Actividad 6 para
+          reforzar la comprensión.
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Actividad 10 · Animaciones de los productos notables · Portafolio de Evidencias</p>
+  </footer>
+
+</body>
+</html>
