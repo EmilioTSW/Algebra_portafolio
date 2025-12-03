@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 8 – Calculadora algebraica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JS GLOBAL + JS DE LA ACTIVIDAD -->
+  <script src="../../js/script_global.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER DE LA ACTIVIDAD -->
+  <header class="main-header">
+    <div class="header-content">
+      <small style="text-transform: uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--muted);">
+        Fundamentos de Álgebra · Actividad 8
+      </small>
+      <h1>Calculadora de operaciones algebraicas</h1>
+      <p>Opera con números reales y observa el desarrollo paso a paso.</p>
+
+      <a class="btn" href="../../index.html">← Volver al portafolio</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="page-actividad">
+
+    <!-- DESCRIPCIÓN / INTRO -->
+    <section class="header-actividad">
+      <small>Operaciones básicas · Números reales</small>
+      <h2>Operaciones con números reales</h2>
+      <p class="intro-text">
+        Ingresa dos valores reales <strong>a</strong> y <strong>b</strong>, selecciona una operación
+        y observa el procedimiento algebraico: se muestra la expresión simbólica,
+        la sustitución de valores y el resultado numérico final.
+      </p>
+    </section>
+
+    <!-- BLOQUE PRINCIPAL: CALCULADORA + EXPLICACIÓN -->
+    <section class="main-actividad" style="display:grid; gap:1.1rem; grid-template-columns:minmax(0,1.4fr) minmax(0,1.1fr);">
+
+      <!-- PANEL DE CÁLCULO -->
+      <article>
+        <fieldset>
+          <legend>Datos de la operación</legend>
+
+          <label for="opA">Primer valor (a)</label>
+          <input
+            type="number"
+            id="opA"
+            placeholder="Ej. 5"
+            step="0.01"
+          >
+
+          <label for="opB">Segundo valor (b)</label>
+          <input
+            type="number"
+            id="opB"
+            placeholder="Ej. 3"
+            step="0.01"
+          >
+
+          <label for="tipoOperacion">Operación</label>
+          <select id="tipoOperacion">
+            <option value="suma">Suma (a + b)</option>
+            <option value="resta">Resta (a - b)</option>
+            <option value="producto">Producto (a · b)</option>
+            <option value="division">División (a ÷ b)</option>
+          </select>
+
+          <button class="btn" id="btnCalcular">Calcular</button>
+        </fieldset>
+
+        <div class="result-panel" id="panelCalc">
+          Esperando datos… Ingresa a, b, elige una operación y luego haz clic en
+          <strong>Calcular</strong>.
+        </div>
+      </article>
+
+      <!-- PANEL TEÓRICO / APOYO -->
+      <aside>
+        <fieldset>
+          <legend>Resumen de operaciones</legend>
+
+          <p style="font-size:.9rem; color:var(--muted); margin-bottom:.5rem;">
+            En esta calculadora se trabajan las cuatro operaciones básicas con números reales:
+          </p>
+
+          <ul style="font-size:.88rem; color:var(--muted); padding-left:1.1rem; line-height:1.5; margin-bottom:.6rem;">
+            <li><strong>Suma:</strong> a + b</li>
+            <li><strong>Resta:</strong> a - b</li>
+            <li><strong>Producto:</strong> a · b</li>
+            <li><strong>División:</strong> a ÷ b (con b ≠ 0)</li>
+          </ul>
+
+          <p style="font-size:.86rem; color:var(--muted);">
+            La idea es reforzar el paso de la notación algebraica al cálculo numérico. Cada vez
+            que realices una operación se mostrará una pequeña explicación con la expresión
+            general, los valores sustituidos y el resultado final.
+          </p>
+        </fieldset>
+
+        <div class="result-panel" style="font-size:.85rem;">
+          Tip: prueba con combinaciones como <strong>a = 5, b = 2</strong>,
+          <strong>a = -3, b = 4</strong> o <strong>a = 7.5, b = 2.5</strong> para ver
+          resultados con enteros y decimales.
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Actividad 8 · Calculadora de operaciones algebraicas · Portafolio de Evidencias</p>
+  </footer>
+
+</body>
+</html>
