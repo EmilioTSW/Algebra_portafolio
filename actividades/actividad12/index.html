@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 12 – Factorización</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JS GLOBAL + JS DE LA ACTIVIDAD -->
+  <script src="../../js/script_global.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER DE LA ACTIVIDAD -->
+  <header class="main-header">
+    <div class="header-content">
+      <small style="text-transform: uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--muted);">
+        Fundamentos de Álgebra · Actividad 12
+      </small>
+      <h1>Animaciones de factorización</h1>
+      <p>Factorización de trinomios de la forma x² + bx + c.</p>
+
+      <a class="btn" href="../../index.html">← Volver al portafolio</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="page-actividad">
+
+    <!-- DESCRIPCIÓN / INTRO -->
+    <section class="header-actividad">
+      <small>Trinomios cuadráticos · x² + bx + c</small>
+      <h2>Factorización de trinomios de la forma x² + bx + c</h2>
+      <p class="intro-text">
+        Introduce los coeficientes <strong>b</strong> y <strong>c</strong> del trinomio
+        <em>x² + bx + c</em> y observa el proceso de factorización animado: se buscarán
+        dos números que multiplicados den <strong>c</strong> y sumados den <strong>b</strong>.
+        Si la factorización es posible con enteros, se mostrará el resultado en forma
+        de producto de binomios.
+      </p>
+    </section>
+
+    <!-- BLOQUE PRINCIPAL: FORMULARIO + APOYO TEÓRICO -->
+    <section class="main-actividad" style="display:grid; gap:1.1rem; grid-template-columns:minmax(0,1.4fr) minmax(0,1.1fr);">
+
+      <!-- PANEL INTERACTIVO -->
+      <article>
+        <fieldset>
+          <legend>Datos del trinomio</legend>
+
+          <label for="coefB">Coeficiente b</label>
+          <input
+            type="number"
+            id="coefB"
+            placeholder="Ej. 5"
+            step="1"
+          >
+
+          <label for="coefC">Coeficiente c</label>
+          <input
+            type="number"
+            id="coefC"
+            placeholder="Ej. 6"
+            step="1"
+          >
+
+          <button class="btn" id="btnFactorizar">Factorizar</button>
+        </fieldset>
+
+        <div class="result-panel" id="panelFactorizacion">
+          Esperando datos… Ingresa b y c, y luego haz clic en
+          <strong>Factorizar</strong>.
+        </div>
+      </article>
+
+      <!-- PANEL TEÓRICO / EXPLICACIÓN -->
+      <aside>
+        <fieldset>
+          <legend>Idea de la factorización</legend>
+
+          <p style="font-size:.9rem; color:var(--muted); margin-bottom:.5rem;">
+            Para factorizar un trinomio de la forma <strong>x² + bx + c</strong> buscamos
+            dos números enteros <strong>m</strong> y <strong>n</strong> tales que:
+          </p>
+
+          <ul style="font-size:.88rem; color:var(--muted); padding-left:1.1rem; line-height:1.5; margin-bottom:.7rem;">
+            <li><strong>m + n = b</strong></li>
+            <li><strong>m · n = c</strong></li>
+          </ul>
+
+          <p style="font-size:.86rem; color:var(--muted); margin-bottom:.6rem;">
+            Si existen esos números, entonces podemos escribir:
+          </p>
+          <p style="font-size:.9rem; margin-bottom:.7rem;">
+            <strong>x² + bx + c = (x + m)(x + n)</strong>
+          </p>
+
+          <p style="font-size:.86rem; color:var(--muted);">
+            Si no encontramos tales enteros <strong>m</strong> y <strong>n</strong>, el
+            trinomio no es factorizable mediante este método simple (al menos usando
+            solo números enteros).
+          </p>
+        </fieldset>
+
+        <div class="result-panel" style="font-size:.85rem;">
+          Tip: prueba casos como <strong>b = 5, c = 6</strong> (x² + 5x + 6),
+          <strong>b = 1, c = -6</strong> (x² + x - 6) o <strong>b = -7, c = 10</strong>
+          (x² - 7x + 10) y observa cómo se encuentran los factores.
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Actividad 12 · Animaciones de factorización · Portafolio de Evidencias</p>
+  </footer>
+
+</body>
+</html>
