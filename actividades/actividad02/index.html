@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 2 – Números complejos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MISMO CSS GLOBAL DEL PORTAFOLIO -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JS GLOBAL + JS PROPIO DE LA ACTIVIDAD -->
+  <script src="../../js/script_global.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER DE LA ACTIVIDAD -->
+  <header class="main-header">
+    <div class="header-content">
+      <small style="text-transform: uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--muted);">
+        Fundamentos de Álgebra · Actividad 2
+      </small>
+      <h1>Demostraciones con Números Complejos</h1>
+      <p>Números complejos · Operaciones básicas y propiedades </p>
+
+      <a class="btn" href="../../index.html">← Volver al portafolio</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL DE LA ACTIVIDAD -->
+  <main class="page-actividad">
+
+    <!-- INTRO / DESCRIPCIÓN -->
+    <section class="header-actividad">
+      <small>Números complejos · HTML / CSS / JavaScript</small>
+      <h2>Operaciones con a + bi y c + di</h2>
+      <p class="intro-text">
+        En esta actividad podrás ingresar dos números complejos en forma <strong>a + bi</strong> y
+        <strong>c + di</strong>, realizar operaciones básicas y observar sus resultados.  
+        Esto permite explorar propiedades como la conmutatividad y asociatividad de la suma
+        y la multiplicación de números complejos.
+      </p>
+    </section>
+
+    <!-- BLOQUE PRINCIPAL: FORMULARIO + RESULTADOS -->
+    <section class="main-actividad" style="display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);">
+
+      <!-- PANEL DE ENTRADA -->
+      <article>
+        <fieldset>
+          <legend>Ingresar números complejos</legend>
+
+          <label for="a">Primer número complejo (a + bi)</label>
+          <input type="text" id="a" placeholder="Ej. 2+3i, -1-4i, 5i, 3">
+
+          <label for="b">Segundo número complejo (c + di)</label>
+          <input type="text" id="b" placeholder="Ej. 1-2i, 4+i, -3i, 2">
+
+          <!-- Botones de operación: usa los mismos IDs o clases que tu JS -->
+          <div style="display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.4rem;">
+            <button class="btn" id="btnSumar">Sumar</button>
+            <button class="btn" id="btnRestar">Restar</button>
+            <button class="btn" id="btnMultiplicar">Multiplicar</button>
+            <button class="btn" id="btnConjugados">Conjugados</button>
+          </div>
+        </fieldset>
+
+        <div class="result-panel" id="resultado">
+          Resultado: esperando datos…
+        </div>
+      </article>
+
+      <!-- PANEL LATERAL DE APOYO TEÓRICO -->
+      <aside>
+        <fieldset>
+          <legend>Propiedades a explorar</legend>
+          <p style="font-size:.9rem; color:var(--muted); margin-bottom:.5rem;">
+            Puedes usar la calculadora para verificar algunas propiedades de los números complejos:
+          </p>
+          <ul style="font-size:.88rem; color:var(--muted); padding-left:1.1rem; line-height:1.5;">
+            <li><strong>Conmutatividad de la suma:</strong> a + b = b + a</li>
+            <li><strong>Conmutatividad del producto:</strong> a · b = b · a</li>
+            <li><strong>Asociatividad de la suma:</strong> (a + b) + c = a + (b + c)</li>
+            <li><strong>Asociatividad del producto:</strong> (a · b) · c = a · (b · c)</li>
+            <li><strong>Conjugado:</strong> Para z = a + bi, su conjugado es z̄ = a − bi</li>
+          </ul>
+        </fieldset>
+
+        <div class="result-panel" style="font-size:.85rem;">
+          Tip: puedes probar con valores sencillos como  
+          <code>1+2i</code>, <code>3-i</code>, <code>-2+4i</code>, etc.,
+          y comparar manualmente los resultados para comprobar las propiedades.
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Actividad 2 · Portafolio de Evidencias · Fundamentos de Álgebra</p>
+  </footer>
+
+</body>
+</html>
