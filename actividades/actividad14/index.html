@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 14 – Ecuaciones de primer grado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JS GLOBAL + JS DE LA ACTIVIDAD -->
+  <script src="../../js/script_global.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER DE LA ACTIVIDAD -->
+  <header class="main-header">
+    <div class="header-content">
+      <small style="text-transform: uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--muted);">
+        Fundamentos de Álgebra · Actividad 14
+      </small>
+      <h1>Calculadora de ecuaciones de primer grado</h1>
+      <p>Resuelve ecuaciones lineales de la forma ax + b = c paso a paso.</p>
+
+      <a class="btn" href="../../index.html">← Volver al portafolio</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="page-actividad">
+
+    <!-- DESCRIPCIÓN / INTRO -->
+    <section class="header-actividad">
+      <small>Ecuaciones lineales · ax + b = c</small>
+      <h2>Resolución de ecuaciones de primer grado de la forma ax + b = c</h2>
+      <p class="intro-text">
+        Introduce los coeficientes <strong>a</strong>, <strong>b</strong> y
+        <strong>c</strong> de la ecuación <em>ax + b = c</em> y observa el
+        procedimiento para despejar <strong>x</strong>. Se mostrará la ecuación
+        original, las operaciones realizadas sobre ambos lados y el valor final
+        de la solución.
+      </p>
+    </section>
+
+    <!-- BLOQUE PRINCIPAL: FORMULARIO + EXPLICACIÓN -->
+    <section class="main-actividad" style="display:grid; gap:1.1rem; grid-template-columns:minmax(0,1.4fr) minmax(0,1.1fr);">
+
+      <!-- PANEL INTERACTIVO -->
+      <article>
+        <fieldset>
+          <legend>Datos de la ecuación</legend>
+
+          <label for="coefA">Coeficiente a</label>
+          <input
+            type="number"
+            id="coefA"
+            placeholder="Ej. 2"
+            step="0.01"
+          >
+
+          <label for="coefB">Coeficiente b</label>
+          <input
+            type="number"
+            id="coefB"
+            placeholder="Ej. 3"
+            step="0.01"
+          >
+
+          <label for="coefC">Término independiente c</label>
+          <input
+            type="number"
+            id="coefC"
+            placeholder="Ej. 11"
+            step="0.01"
+          >
+
+          <button class="btn" id="btnResolver">Resolver ecuación</button>
+        </fieldset>
+
+        <div class="result-panel" id="panelEcuacion">
+          Esperando datos… Ingresa a, b y c, y luego haz clic en
+          <strong>Resolver ecuación</strong>.
+        </div>
+      </article>
+
+      <!-- PANEL TEÓRICO / APOYO -->
+      <aside>
+        <fieldset>
+          <legend>Procedimiento general</legend>
+
+          <p style="font-size:.9rem; color:var(--muted); margin-bottom:.5rem;">
+            Para una ecuación de la forma <strong>ax + b = c</strong>, el objetivo es
+            despejar <strong>x</strong>. El procedimiento algebraico estándar es:
+          </p>
+
+          <ol style="font-size:.88rem; color:var(--muted); padding-left:1.1rem; line-height:1.5; margin-bottom:.7rem;">
+            <li>Restar <strong>b</strong> en ambos lados: <br>ax + b − b = c − b</li>
+            <li>Simplificar: <br><strong>ax = c − b</strong></li>
+            <li>Dividir entre <strong>a</strong> (si a ≠ 0): <br><strong>x = (c − b) / a</strong></li>
+          </ol>
+
+          <p style="font-size:.86rem; color:var(--muted);">
+            Si <strong>a = 0</strong>, la ecuación ya no es de primer grado: puede no tener
+            solución o tener infinitas soluciones dependiendo de los valores de
+            <strong>b</strong> y <strong>c</strong>.
+          </p>
+        </fieldset>
+
+        <div class="result-panel" style="font-size:.85rem;">
+          Tip: prueba con ecuaciones como <strong>2x + 3 = 11</strong>,
+          <strong>-3x + 5 = 2</strong> o <strong>0x + 4 = 4</strong> para ver
+          distintos tipos de soluciones (única, imposible, indeterminada).
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Actividad 14 · Calculadora de ecuaciones de primer grado · Portafolio de Evidencias</p>
+  </footer>
+
+</body>
+</html>
