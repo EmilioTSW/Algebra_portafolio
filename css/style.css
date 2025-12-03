@@ -2,16 +2,16 @@
    VARIABLES Y BASE
    =========================== */
 :root {
-  --bg: #020617;             /* fondo principal casi negro */
-  --bg-elevated: #02091a;    /* tarjetas y contenedores */
-  --accent: #38bdf8;         /* azul cian principal */
-  --accent-soft: #0ea5e9;    /* azul suave */
+  --bg: #050312;             /* fondo principal morado muy oscuro */
+  --bg-elevated: #0b061b;    /* tarjetas y contenedores */
+  --accent: #f97316;         /* acento naranja */
+  --accent-soft: #fbbf24;    /* acento dorado suave */
   --text: #f9fafb;
   --muted: #9ca3af;
-  --border-subtle: #1e2534;
-  --radius-lg: 10px;
+  --border-subtle: #261c3a;
+  --radius-lg: 12px;
   --radius-md: 8px;
-  --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.7);
+  --shadow-soft: 0 18px 48px rgba(0, 0, 0, 0.8);
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
 }
@@ -32,7 +32,7 @@ body {
 
 body {
   font-family: var(--font-main);
-  background: var(--bg);
+  background: radial-gradient(circle at top, #1f1235 0, #050312 55%);
   color: var(--text);
   display: flex;
   flex-direction: column;
@@ -43,11 +43,9 @@ body::before {
   content: "";
   position: fixed;
   inset: -40%;
-  background: radial-gradient(
-    circle at top,
-    rgba(56, 189, 248, 0.18),
-    transparent 55%
-  );
+  background:
+    radial-gradient(circle at 10% 0%, rgba(248, 250, 252, 0.06), transparent 55%),
+    radial-gradient(circle at 90% 0%, rgba(248, 181, 0, 0.18), transparent 60%);
   opacity: 0.9;
   z-index: -1;
 }
@@ -60,9 +58,9 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(2, 6, 23, 0.96);
+  background: rgba(5, 3, 18, 0.96);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(30, 24, 54, 0.9);
 }
 
 .header-content {
@@ -114,9 +112,9 @@ body::before {
   border-radius: var(--radius-lg);
   padding: 1rem 1.1rem;
   background: linear-gradient(
-    to right,
+    135deg,
     rgba(15, 23, 42, 0.96),
-    rgba(15, 23, 42, 0.9)
+    rgba(30, 27, 75, 0.92)
   );
   border: 1px solid var(--border-subtle);
 }
@@ -166,11 +164,11 @@ body::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 10%;
-  bottom: 10%;
+  top: 12%;
+  bottom: 12%;
   width: 3px;
   background: linear-gradient(to bottom, var(--accent), transparent);
-  opacity: 0.55;
+  opacity: 0.65;
   transform: scaleY(0.8);
   transition:
     opacity 0.18s ease,
@@ -189,9 +187,9 @@ body::before {
 /* hover elegante */
 .card-actividad:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  border-color: rgba(56, 189, 248, 0.6);
-  background: #030b18;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.85);
+  border-color: rgba(249, 115, 22, 0.7);
+  background: #12091f;
 }
 
 .card-actividad:hover::before {
@@ -235,7 +233,7 @@ body::before {
   margin-top: 0.4rem;
   padding: 0.55rem 1rem;
   border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.9);
+  border: 1px solid rgba(249, 115, 22, 0.9);
   background: transparent;
   color: var(--text);
   font-size: 0.85rem;
@@ -260,9 +258,9 @@ body::before {
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(56, 189, 248, 0.22),
+    rgba(249, 115, 22, 0.28),
     transparent,
-    rgba(56, 189, 248, 0.18)
+    rgba(251, 191, 36, 0.18)
   );
   opacity: 0;
   transform: translateX(-35%);
@@ -272,11 +270,11 @@ body::before {
 }
 
 .btn:hover {
-  background: rgba(56, 189, 248, 0.1);
-  color: #e0f2fe;
+  background: rgba(249, 115, 22, 0.1);
+  color: #fffbeb;
   border-color: var(--accent-soft);
   transform: translateY(-1px);
-  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 16px 36px rgba(248, 181, 0, 0.45);
 }
 
 .btn:hover::after {
@@ -353,8 +351,8 @@ select {
   width: 100%;
   padding: 0.55rem 0.6rem;
   border-radius: 6px;
-  border: 1px solid #1e293b;
-  background: #020617;
+  border: 1px solid #312e81;
+  background: #050416;
   color: var(--text);
   font-size: 0.9rem;
   margin-bottom: 0.7rem;
@@ -373,9 +371,9 @@ select:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow:
-    0 0 0 1px rgba(56, 189, 248, 0.7),
-    0 0 25px rgba(56, 189, 248, 0.35);
-  background: #020816;
+    0 0 0 1px rgba(249, 115, 22, 0.7),
+    0 0 25px rgba(248, 181, 0, 0.35);
+  background: #0b061d;
 }
 
 /* Panel de resultados / consola */
@@ -383,7 +381,7 @@ select:focus {
   margin-top: 0.8rem;
   padding: 0.75rem 0.9rem;
   border-radius: var(--radius-md);
-  background: #020617;
+  background: #050312;
   border: 1px dashed rgba(148, 163, 184, 0.8);
   min-height: 2.3rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -401,7 +399,7 @@ select:focus {
   text-align: center;
   color: var(--muted);
   padding: 1rem 0.5rem 1.3rem;
-  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  border-top: 1px solid rgba(30, 24, 54, 0.9);
   margin-top: auto;
 }
 
